@@ -38,23 +38,24 @@
     <style>
         /* Custom animations and glow effects */
         .glass-panel {
-            background: rgba(27, 19, 17, 0.65);
+            background: rgba(20, 15, 13, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(20, 15, 13, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(232, 184, 158, 0.3);
+            background: rgba(20, 15, 13, 0.8);
+            border-color: rgba(232, 184, 158, 0.4);
             transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(232, 184, 158, 0.1);
+            box-shadow: 0 12px 30px rgba(232, 184, 158, 0.15);
         }
         .glow-text {
             text-shadow: 0 0 15px rgba(232, 184, 158, 0.4);
@@ -88,7 +89,7 @@
         .modal-animate {
             animation: modalShow 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        /* Background video overlay setting */
+        /* Background video setting (Không sử dụng filter hay phủ màu làm mờ) */
         #bg-video {
             position: fixed;
             right: 0;
@@ -99,20 +100,7 @@
             height: auto;
             z-index: -20;
             object-fit: cover;
-        }
-        .video-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                135deg,
-                rgba(27, 19, 17, 0.82) 0%,
-                rgba(38, 28, 25, 0.9) 50%,
-                rgba(22, 16, 14, 0.95) 100%
-            );
-            z-index: -19;
+            filter: none !important;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -130,13 +118,12 @@
         }
     </style>
 </head>
-<body class="text-dreamy-cream font-sans bg-dreamy-dusk overflow-x-hidden antialiased">
+<body class="text-dreamy-cream font-sans overflow-x-hidden antialiased">
 
-    <!-- Background Video & Overlay -->
+    <!-- Background Video Unfiltered -->
     <video autoplay loop muted playsinline id="bg-video">
         <source src="back.mp4" type="video/mp4">
     </video>
-    <div class="video-overlay"></div>
 
     <!-- Background decorative elements -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-10]">
@@ -189,7 +176,7 @@
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             
             <!-- Intro Text -->
-            <div class="md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-1">
+            <div class="md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-1 glass-panel p-8 sm:p-10 rounded-3xl">
                 <div class="inline-block px-3 py-1 rounded-full border border-dreamy-glow/20 bg-dreamy-glow/5 text-xs tracking-widest text-dreamy-glow uppercase font-semibold">
                     Digital Portfolio
                 </div>
@@ -204,10 +191,10 @@
                 
                 <!-- Quick Info Chips -->
                 <div class="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
-                    <span class="glass-panel px-4 py-2 rounded-full text-xs text-dreamy-cream/90 flex items-center gap-2">
+                    <span class="bg-black/40 border border-white/10 px-4 py-2 rounded-full text-xs text-dreamy-cream/90 flex items-center gap-2">
                         <i class="fa-solid fa-id-card text-dreamy-glow"></i> MSSV: 25040405
                     </span>
-                    <span class="glass-panel px-4 py-2 rounded-full text-xs text-dreamy-cream/90 flex items-center gap-2">
+                    <span class="bg-black/40 border border-white/10 px-4 py-2 rounded-full text-xs text-dreamy-cream/90 flex items-center gap-2">
                         <i class="fa-solid fa-graduation-cap text-dreamy-glow"></i> Đại học Ngoại ngữ - ĐHQGHN
                     </span>
                 </div>
@@ -234,9 +221,9 @@
         </div>
         
         <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 opacity-60">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 opacity-80 bg-black/50 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
             <span class="text-xs tracking-widest uppercase font-light">Cuộn xuống</span>
-            <div class="w-1.5 h-8 bg-dreamy-glow/30 rounded-full relative overflow-hidden">
+            <div class="w-1.5 h-6 bg-dreamy-glow/30 rounded-full relative overflow-hidden">
                 <div class="w-full h-1/2 bg-dreamy-glow rounded-full absolute top-0 left-0 animate-bounce"></div>
             </div>
         </div>
@@ -264,7 +251,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto relative">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 bg-black/40 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
             <h2 class="font-serif text-3xl sm:text-4xl text-dreamy-glow glow-text">Dự Án Cá Nhân & Bài Tập</h2>
             <div class="w-20 h-0.5 bg-dreamy-glow mx-auto rounded-full"></div>
             <p class="text-sm sm:text-base text-dreamy-cream/70 font-light">
@@ -393,12 +380,11 @@
     </section>
 
     <!-- Reflections Section (Tổng kết bản thân) -->
-    <section id="summary" class="py-24 px-6 bg-dreamy-cream/5 border-t border-b border-white/5 relative">
+    <section id="summary" class="py-24 px-6 relative">
         <div class="max-w-4xl mx-auto space-y-10">
-            <div class="text-center space-y-4">
+            <div class="text-center space-y-4 bg-black/40 p-4 rounded-full max-w-sm mx-auto border border-white/5 backdrop-blur-sm">
                 <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Nhìn lại hành trình</span>
                 <h2 class="font-serif text-3xl sm:text-4xl text-dreamy-glow glow-text">Tổng kết bản thân</h2>
-                <div class="w-16 h-0.5 bg-dreamy-glow mx-auto rounded-full"></div>
             </div>
 
             <div class="glass-panel rounded-3xl p-8 sm:p-12 space-y-8">
@@ -425,7 +411,7 @@
                     </div>
                     <div class="space-y-2">
                         <div class="text-3xl font-serif text-dreamy-glow glow-text">100%</div>
-                        <div class="text-xs text-dreamy-cream/60 uppercase tracking-widest">Tự tin ứng dụng công nghệ</div>
+                        <div class="text-xs text-dreamy-cream/60 uppercase tracking-widest font-sans">Tự tin ứng dụng công nghệ</div>
                     </div>
                 </div>
             </div>
@@ -433,8 +419,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 text-center text-dreamy-cream/50 text-xs tracking-wider space-y-4">
-        <div class="flex justify-center space-x-6 text-lg text-dreamy-cream/70">
+    <footer class="py-12 px-6 text-center text-dreamy-cream/60 text-xs tracking-wider space-y-4 bg-black/50 border-t border-white/5 backdrop-blur-sm">
+        <div class="flex justify-center space-x-6 text-lg text-dreamy-cream/80">
             <a href="https://drive.google.com/drive/folders/1lVBsqWS9JQ_-yKX5l7Wb2VbEJs4Jri6f?usp=drive_link" target="_blank" class="hover:text-dreamy-glow transition-colors"><i class="fa-brands fa-google-drive"></i></a>
             <a href="#" class="hover:text-dreamy-glow transition-colors"><i class="fa-solid fa-graduation-cap"></i></a>
         </div>
@@ -548,7 +534,7 @@
                             </p>
                             <ul class="list-disc pl-5 mt-2 space-y-1 text-xs text-dreamy-cream/70">
                                 <li><strong>Prompt Cơ bản:</strong> Chỉ yêu cầu AI nêu ý nghĩa đơn giản và ví dụ sử dụng. Kết quả trả về khá hời hợt.</li>
-                                <li><strong>Prompt Cải tiến:</strong> Bổ sung yêu cầu so sánh sự khác nhau giữa "thần thái" và "ngoại hình", đi kèm cấu trúc phân tích chi tiết.</li>
+                                <li><strong>Prompt Cải tiến:</strong> Bổ dung yêu cầu so sánh sự khác nhau giữa "thần thái" và "ngoại hình", đi kèm cấu trúc phân tích chi tiết.</li>
                                 <li><strong>Prompt Nâng cao (Master):</strong> Đặt AI vào vai trò <em>Chuyên gia ngôn ngữ học ứng dụng</em>, phân tích đa chiều từ sắc thái biểu cảm, ngữ cảnh cho đến so sánh trực diện với các khái niệm tương đồng như <em>khí chất, phong thái</em>.</li>
                             </ul>
                         </div>

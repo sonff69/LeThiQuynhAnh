@@ -36,29 +36,33 @@
         }
     </script>
     <style>
-        /* Custom animations and glow effects */
+        /* Custom animations and high-transparency glassmorphism */
         .glass-panel {
-            background: rgba(20, 15, 13, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px) saturate(120%);
+            -webkit-backdrop-filter: blur(14px) saturate(120%);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
         }
         .glass-card {
-            background: rgba(20, 15, 13, 0.65);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px) saturate(110%);
+            -webkit-backdrop-filter: blur(10px) saturate(110%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            background: rgba(20, 15, 13, 0.8);
+            background: rgba(255, 255, 255, 0.08);
             border-color: rgba(232, 184, 158, 0.4);
             transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(232, 184, 158, 0.15);
+            box-shadow: 0 12px 30px rgba(232, 184, 158, 0.2);
+        }
+        /* Sub-shadow for readability over bright, unfiltered backgrounds */
+        .readable-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
         .glow-text {
-            text-shadow: 0 0 15px rgba(232, 184, 158, 0.4);
+            text-shadow: 0 0 15px rgba(232, 184, 158, 0.5);
         }
         .glow-button {
             box-shadow: 0 0 15px rgba(232, 184, 158, 0.2);
@@ -89,7 +93,7 @@
         .modal-animate {
             animation: modalShow 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        /* Background video setting (Không sử dụng filter hay phủ màu làm mờ) */
+        /* Unfiltered Background Video */
         #bg-video {
             position: fixed;
             right: 0;
@@ -184,7 +188,7 @@
                     Chào cậu, mình là <br>
                     <span class="text-dreamy-glow glow-text">Lê Thị Quỳnh Anh</span>
                 </h1>
-                <p class="text-base sm:text-lg text-dreamy-cream/80 font-light leading-relaxed max-w-xl">
+                <p class="text-base sm:text-lg text-dreamy-cream font-light leading-relaxed max-w-xl readable-shadow">
                     Một cô sinh viên khoa <span class="font-medium text-dreamy-glow">Ngôn ngữ và Văn hóa Anh</span> tại <span class="font-medium">ULIS - VNU</span>. 
                     Mang trong mình tình yêu sâu sắc với vẻ đẹp của ngôn từ, mình đã bắt đầu hành trình đầy thử thách nhưng vô cùng thú vị: tích hợp sức mạnh của công nghệ số và trí tuệ nhân tạo để khai phá những góc nhìn mới trong học tập và sáng tạo.
                 </p>
@@ -212,7 +216,7 @@
                 <div class="relative group">
                     <!-- Glow background effect -->
                     <div class="absolute -inset-1.5 bg-gradient-to-r from-dreamy-glow to-dreamy-clay rounded-3xl blur opacity-30 group-hover:opacity-55 transition duration-1000 group-hover:duration-200"></div>
-                    <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden glass-panel border border-white/10 p-2">
+                    <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden glass-panel border border-white/15 p-2">
                         <img src="Hình 1.jpg" alt="Lê Thị Quỳnh Anh" class="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105">
                     </div>
                 </div>
@@ -221,7 +225,7 @@
         </div>
         
         <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 opacity-80 bg-black/50 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 bg-black/40 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
             <span class="text-xs tracking-widest uppercase font-light">Cuộn xuống</span>
             <div class="w-1.5 h-6 bg-dreamy-glow/30 rounded-full relative overflow-hidden">
                 <div class="w-full h-1/2 bg-dreamy-glow rounded-full absolute top-0 left-0 animate-bounce"></div>
@@ -236,7 +240,7 @@
             <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div class="space-y-2">
                     <h3 class="font-serif text-2xl text-dreamy-glow">Kho dữ liệu học tập trực tuyến</h3>
-                    <p class="text-sm text-dreamy-cream/70 max-w-xl">
+                    <p class="text-sm text-dreamy-cream/80 readable-shadow max-w-xl">
                         Toàn bộ tài liệu, minh chứng cụ thể cùng các báo cáo chuyên sâu đầy đủ cho từng phần bài tập thực hành của mình đều được lưu trữ trực tiếp và khoa học trên Google Drive.
                     </p>
                 </div>
@@ -251,10 +255,10 @@
 
     <!-- Projects Section -->
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto relative">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 bg-black/40 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4 bg-black/30 p-6 rounded-3xl border border-white/5 backdrop-blur-sm">
             <h2 class="font-serif text-3xl sm:text-4xl text-dreamy-glow glow-text">Dự Án Cá Nhân & Bài Tập</h2>
             <div class="w-20 h-0.5 bg-dreamy-glow mx-auto rounded-full"></div>
-            <p class="text-sm sm:text-base text-dreamy-cream/70 font-light">
+            <p class="text-sm sm:text-base text-dreamy-cream font-light readable-shadow">
                 Nơi tổng hợp 6 chặng đường học tập thực tế từ môn "Nhập môn công nghệ số và ứng dụng AI", thể hiện quá trình tự nghiên cứu và hoàn thiện bản thân của mình.
             </p>
         </div>
@@ -263,7 +267,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Project 1 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal1')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal1')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-folder-tree"></i>
@@ -272,7 +276,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 1</span>
                         <h3 class="font-serif text-xl group-hover:text-dreamy-glow transition-colors duration-300">Quản lý tệp & Thư mục</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Thực hành quy hoạch không gian làm việc số khoa học, tối ưu cấu trúc thư mục trên PC phục vụ việc lưu trữ thông tin học tập ngăn nắp và hiệu quả.
                     </p>
                 </div>
@@ -282,7 +286,7 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal2')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal2')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -291,7 +295,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 2</span>
                         <h3 class="font-serif text-xl">Tìm kiếm & Đánh giá thông tin</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Nghiên cứu về cơ hội & thách thức của AI trong Ngôn ngữ học. Thực hành đánh giá độ tin cậy của 10 nguồn tài liệu bằng phương pháp đối chiếu đa chiều chuyên sâu.
                     </p>
                 </div>
@@ -301,7 +305,7 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal3')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal3')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-terminal"></i>
@@ -310,7 +314,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 3</span>
                         <h3 class="font-serif text-xl">Kỹ thuật Gợi lệnh (Prompt Engineering)</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Phát triển các cấp độ Prompt (Cơ bản - Cải tiến - Nâng cao) để giải quyết các tác vụ học tập phức tạp, ứng dụng phân tích sâu sắc khái niệm trừu tượng "Thần thái".
                     </p>
                 </div>
@@ -320,7 +324,7 @@
             </div>
 
             <!-- Project 4 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal4')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal4')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-users-gear"></i>
@@ -329,7 +333,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 4</span>
                         <h3 class="font-serif text-xl">Hợp tác trực tuyến & Quản lý</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Trải nghiệm vai trò Trưởng nhóm trong dự án nghiên cứu ẩm thực "Cơ sở văn hóa Việt Nam", điều hành công việc mượt mà thông qua Trello, Zalo và Google Docs.
                     </p>
                 </div>
@@ -339,7 +343,7 @@
             </div>
 
             <!-- Project 5 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal5')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal5')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -348,7 +352,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 5</span>
                         <h3 class="font-serif text-xl">Sáng tạo nội dung với AI sinh ngẫu</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Thực hiện chiến dịch "Gen Z Slang Decoded" – giải mã tiếng lóng của giới trẻ dưới góc độ ngữ âm & chuyển nghĩa, kết hợp ChatGPT, Midjourney và Canva AI.
                     </p>
                 </div>
@@ -358,7 +362,7 @@
             </div>
 
             <!-- Project 6 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between" onclick="openModal('modal6')">
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer" onclick="openModal('modal6')">
                 <div class="space-y-4">
                     <div class="w-12 h-12 rounded-xl bg-dreamy-glow/10 flex items-center justify-center text-dreamy-glow text-xl">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -367,7 +371,7 @@
                         <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Bài tập 6</span>
                         <h3 class="font-serif text-xl">Sử dụng AI có trách nhiệm</h3>
                     </div>
-                    <p class="text-sm text-dreamy-cream/70 font-light line-clamp-3">
+                    <p class="text-sm text-dreamy-cream/90 font-light line-clamp-3 readable-shadow">
                         Xây dựng nguyên tắc ứng xử học thuật liêm chính dựa trên quy chế đại học, đúc kết bộ 7 quy chuẩn sử dụng AI lành mạnh và sơ đồ Dos & Don'ts cụ thể.
                     </p>
                 </div>
@@ -382,13 +386,13 @@
     <!-- Reflections Section (Tổng kết bản thân) -->
     <section id="summary" class="py-24 px-6 relative">
         <div class="max-w-4xl mx-auto space-y-10">
-            <div class="text-center space-y-4 bg-black/40 p-4 rounded-full max-w-sm mx-auto border border-white/5 backdrop-blur-sm">
+            <div class="text-center space-y-4 bg-black/30 p-4 rounded-full max-w-sm mx-auto border border-white/5 backdrop-blur-sm">
                 <span class="text-xs text-dreamy-glow tracking-widest uppercase font-semibold">Nhìn lại hành trình</span>
                 <h2 class="font-serif text-3xl sm:text-4xl text-dreamy-glow glow-text">Tổng kết bản thân</h2>
             </div>
 
             <div class="glass-panel rounded-3xl p-8 sm:p-12 space-y-8">
-                <div class="space-y-4 font-light text-dreamy-cream/80 leading-relaxed text-sm sm:text-base">
+                <div class="space-y-4 font-light text-dreamy-cream/90 leading-relaxed text-sm sm:text-base readable-shadow">
                     <p>
                         Khi bắt đầu khóa học, mình từng nghĩ công nghệ là thế giới lạnh lùng của những dòng mã code, còn ngoại ngữ là vùng đất bay bổng của những tâm hồn văn chương. Thế nhưng, cuộc hành trình này đã làm thay đổi hoàn toàn tư duy của mình. Mình nhận ra công nghệ số và AI không hề làm mất đi tính nhân văn, ngược lại, chúng chính là những chất xúc tác vô cùng mạnh mẽ để mở rộng biên giới sáng tạo và nâng tầm tư duy học thuật.
                     </p>
@@ -403,15 +407,15 @@
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-white/10 text-center">
                     <div class="space-y-2">
                         <div class="text-3xl font-serif text-dreamy-glow glow-text">06</div>
-                        <div class="text-xs text-dreamy-cream/60 uppercase tracking-widest">Chuyên đề hoàn thành</div>
+                        <div class="text-xs text-dreamy-cream/80 uppercase tracking-widest">Chuyên đề hoàn thành</div>
                     </div>
                     <div class="space-y-2">
                         <div class="text-3xl font-serif text-dreamy-glow glow-text">07</div>
-                        <div class="text-xs text-dreamy-cream/60 uppercase tracking-widest font-sans">Nguyên tắc liêm chính</div>
+                        <div class="text-xs text-dreamy-cream/80 uppercase tracking-widest font-sans">Nguyên tắc liêm chính</div>
                     </div>
                     <div class="space-y-2">
                         <div class="text-3xl font-serif text-dreamy-glow glow-text">100%</div>
-                        <div class="text-xs text-dreamy-cream/60 uppercase tracking-widest font-sans">Tự tin ứng dụng công nghệ</div>
+                        <div class="text-xs text-dreamy-cream/80 uppercase tracking-widest font-sans">Tự tin ứng dụng công nghệ</div>
                     </div>
                 </div>
             </div>
@@ -419,8 +423,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 text-center text-dreamy-cream/60 text-xs tracking-wider space-y-4 bg-black/50 border-t border-white/5 backdrop-blur-sm">
-        <div class="flex justify-center space-x-6 text-lg text-dreamy-cream/80">
+    <footer class="py-12 px-6 text-center text-dreamy-cream/80 text-xs tracking-wider space-y-4 bg-black/40 border-t border-white/15 backdrop-blur-md">
+        <div class="flex justify-center space-x-6 text-lg text-dreamy-cream/90">
             <a href="https://drive.google.com/drive/folders/1lVBsqWS9JQ_-yKX5l7Wb2VbEJs4Jri6f?usp=drive_link" target="_blank" class="hover:text-dreamy-glow transition-colors"><i class="fa-brands fa-google-drive"></i></a>
             <a href="#" class="hover:text-dreamy-glow transition-colors"><i class="fa-solid fa-graduation-cap"></i></a>
         </div>
@@ -431,7 +435,7 @@
     <!-- MODAL POPUPS FOR DETAILED PROJECTS -->
 
     <!-- Modal 1: File & Folder Management -->
-    <div id="modal1" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal1" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow transition-colors">
                 <i class="fa-solid fa-xmark"></i>
@@ -441,8 +445,8 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 1</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">Quản lý tệp & Thư mục số khoa học</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Mục tiêu:</strong> Thiết lập thói quen tổ chức dữ liệu khoa học, dọn dẹp "vũ trụ số" trên máy tính cá nhân để tiết kiệm thời gian tìm kiếm và đảm bảo dữ liệu không bao giờ bị thất lạc.
                     </p>
@@ -467,7 +471,7 @@
     </div>
 
     <!-- Modal 2: Search & Evaluate Info -->
-    <div id="modal2" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal2" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow">
                 <i class="fa-solid fa-xmark"></i>
@@ -477,8 +481,8 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 2</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">Bộ lọc thông tin trong Kỷ nguyên AI & Ngôn ngữ học</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Đề tài nghiên cứu:</strong> "Cơ hội và thách thức của việc áp dụng Trí tuệ nhân tạo đến ngành Ngôn ngữ học".
                     </p>
@@ -496,7 +500,7 @@
                     </ul>
                     <div class="p-4 rounded-xl bg-white/5 border border-white/10">
                         <h4 class="font-semibold text-dreamy-glow mb-2">Kết quả phân cấp độ tin cậy:</h4>
-                        <ol class="list-decimal pl-5 space-y-1 text-xs text-dreamy-cream/70">
+                        <ol class="list-decimal pl-5 space-y-1 text-xs text-dreamy-cream/90">
                             <li><strong>Tier 1 (Tối cao - Rất cao):</strong> Báo cáo của Cambridge University Press & Tạp chí Brain Sciences (MDPI).</li>
                             <li><strong>Tier 2 (Cao):</strong> Các nghiên cứu khoa học đăng tải trên Tạp chí Giáo dục & tạp chí KH&CN Việt Nam (VJST).</li>
                             <li><strong>Tier 3 (Khá - Trung bình):</strong> Báo chí dữ liệu ngành (Giáo dục & Thời đại) và báo tin tức tổng hợp đại chúng (Báo Quảng Ninh, CaféF).</li>
@@ -511,7 +515,7 @@
     </div>
 
     <!-- Modal 3: Prompt Engineering -->
-    <div id="modal3" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal3" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow">
                 <i class="fa-solid fa-xmark"></i>
@@ -521,20 +525,20 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 3</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">Nghệ thuật giao tiếp với AI qua Gợi lệnh</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Ý tưởng cốt lõi:</strong> Thay vì chỉ giao tiếp đơn thuần, Prompt Engineering là cách chúng ta định hình tư duy của AI. Mình đã thử nghiệm 3 cấp độ lệnh để thực hiện 3 tác vụ học thuật khác nhau: Tóm tắt bài báo kinh tế, Giải thích khái niệm văn hóa, và Thiết kế bộ đề kiểm tra học thuật.
                     </p>
                     <div class="space-y-4">
                         <div class="p-4 rounded-xl bg-white/5 border border-white/5">
                             <h4 class="font-semibold text-dreamy-glow flex items-center gap-2"><i class="fa-solid fa-language"></i> Case Study: Phân tích khái niệm "Thần thái"</h4>
-                            <p class="text-xs text-dreamy-cream/70 mt-1">
+                            <p class="text-xs text-dreamy-cream/80 mt-1">
                                 Làm thế nào để giải thích cho một cỗ máy hiểu về "Thần thái" - một từ vốn mang tính ước lệ, cảm tính sâu sắc của người Việt?
                             </p>
-                            <ul class="list-disc pl-5 mt-2 space-y-1 text-xs text-dreamy-cream/70">
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-xs text-dreamy-cream/80">
                                 <li><strong>Prompt Cơ bản:</strong> Chỉ yêu cầu AI nêu ý nghĩa đơn giản và ví dụ sử dụng. Kết quả trả về khá hời hợt.</li>
-                                <li><strong>Prompt Cải tiến:</strong> Bổ dung yêu cầu so sánh sự khác nhau giữa "thần thái" và "ngoại hình", đi kèm cấu trúc phân tích chi tiết.</li>
+                                <li><strong>Prompt Cải tiến:</strong> Bổ sung yêu cầu so sánh sự khác nhau giữa "thần thái" và "ngoại hình", đi kèm cấu trúc phân tích chi tiết.</li>
                                 <li><strong>Prompt Nâng cao (Master):</strong> Đặt AI vào vai trò <em>Chuyên gia ngôn ngữ học ứng dụng</em>, phân tích đa chiều từ sắc thái biểu cảm, ngữ cảnh cho đến so sánh trực diện với các khái niệm tương đồng như <em>khí chất, phong thái</em>.</li>
                             </ul>
                         </div>
@@ -551,7 +555,7 @@
     </div>
 
     <!-- Modal 4: Online Collaboration -->
-    <div id="modal4" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal4" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow">
                 <i class="fa-solid fa-xmark"></i>
@@ -561,8 +565,8 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 4</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">Quản lý & Hợp tác trực tuyến thời đại số</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Dự án nhóm thực hành:</strong> Nghiên cứu dã ngoại và viết báo cáo giữa kỳ môn "Cơ sở văn hóa Việt Nam" về chủ đề ẩm thực truyền thống: <em>"Giá trị văn hóa của Bún chả trong đời sống người Hà Nội"</em>.
                     </p>
@@ -579,10 +583,10 @@
                     </ul>
                     <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2">
                         <h4 class="font-semibold text-dreamy-glow"><i class="fa-solid fa-triangle-exclamation"></i> Thử thách & Giải pháp thực tế:</h4>
-                        <p class="text-xs text-dreamy-cream/70">
+                        <p class="text-xs text-dreamy-cream/80">
                             <em>Thử thách:</em> Thành viên quên cập nhật thẻ Trello, trôi tin nhắn quan trọng trên Zalo, và xung đột ý kiến khi cùng chỉnh sửa trực tiếp trên file văn bản.
                         </p>
-                        <p class="text-xs text-dreamy-cream/70">
+                        <p class="text-xs text-dreamy-cream/80">
                             <em>Giải pháp đối phó của mình:</em> Cài đặt thông báo tự động từ Trello về điện thoại, tag trực tiếp thành viên có trách nhiệm vào công việc, và chủ động gọi điện để đàm phán giải quyết dứt điểm các bất đồng quan điểm học tập.
                         </p>
                     </div>
@@ -595,7 +599,7 @@
     </div>
 
     <!-- Modal 5: Content Creation with AI -->
-    <div id="modal5" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal5" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal5')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow">
                 <i class="fa-solid fa-xmark"></i>
@@ -605,8 +609,8 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 5</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">"Gen Z Slang Decoded" | Sáng tạo số kết hợp AI</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Mục tiêu dự án:</strong> Sáng tạo một bài viết ngắn khoảng 500 từ kèm theo một Infographic sinh động để "giải mã" ngôn ngữ độc đáo của thế hệ trẻ Gen Z dưới lăng kính khoa học Ngôn ngữ học một cách hài hước và gần gũi.
                     </p>
@@ -620,7 +624,7 @@
                     </ul>
                     <div class="p-4 rounded-xl bg-white/5 border border-white/5">
                         <h4 class="font-semibold text-dreamy-glow"><i class="fa-solid fa-lightbulb"></i> Đóng góp sáng tạo cá nhân (Yếu tố con người):</h4>
-                        <p class="text-xs text-dreamy-cream/70 mt-1">
+                        <p class="text-xs text-dreamy-cream/80 mt-1">
                             Mình không sử dụng trực tiếp bản thô của AI. Về nội dung, mình trực tiếp viết lại toàn bộ bài phân tích và đưa các thuật ngữ ngôn ngữ học chuyên sâu vào (hiện tượng vay mượn ngữ âm, biến đổi nghĩa học, mượn từ tiếng Anh, sự giản lược và nói giảm nói tránh) mà AI chưa tự phân tích sâu sắc được. Về thẩm mỹ, mình tự chọn lại font chữ tiếng Việt không lỗi hiển thị, tối ưu hóa sắc độ màu tương phản để mang lại trải nghiệm đọc mượt mà nhất.
                         </p>
                     </div>
@@ -633,7 +637,7 @@
     </div>
 
     <!-- Modal 6: Responsible AI -->
-    <div id="modal6" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="modal6" class="fixed inset-0 z-50 overflow-y-auto hidden bg-dreamy-dusk/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="glass-panel max-w-3xl w-full rounded-3xl p-6 sm:p-8 modal-animate max-h-[90vh] overflow-y-auto relative">
             <button onclick="closeModal('modal6')" class="absolute top-4 right-4 text-2xl text-dreamy-cream/70 hover:text-dreamy-glow">
                 <i class="fa-solid fa-xmark"></i>
@@ -643,8 +647,8 @@
                     <span class="text-xs text-dreamy-glow font-semibold tracking-widest uppercase">Bài tập 6</span>
                     <h3 class="font-serif text-2xl sm:text-3xl text-dreamy-glow">Học tập liêm chính & Sử dụng AI có trách nhiệm</h3>
                 </div>
-                <div class="w-full h-1 bg-white/10 rounded-full"></div>
-                <div class="space-y-4 text-sm text-dreamy-cream/80 leading-relaxed font-light">
+                <div class="w-full h-1 bg-white/20 rounded-full"></div>
+                <div class="space-y-4 text-sm text-dreamy-cream/90 leading-relaxed font-light readable-shadow">
                     <p>
                         <strong>Bối cảnh thực hành:</strong> Thực hiện chuẩn bị bài thuyết trình 5 phút về lợi ích và thách thức của AI trong giáo dục đại học, bám sát theo định hướng giáo dục liêm chính của Đại học Quốc gia Hà Nội (ĐHQGHN).
                     </p>
@@ -653,7 +657,7 @@
                     </p>
                     <div class="p-4 rounded-xl bg-white/5 border border-white/5">
                         <h4 class="font-semibold text-dreamy-glow mb-2">Bộ 7 nguyên tắc đạo đức cá nhân về AI:</h4>
-                        <ul class="list-decimal pl-5 space-y-1.5 text-xs text-dreamy-cream/70">
+                        <ul class="list-decimal pl-5 space-y-1.5 text-xs text-dreamy-cream/80">
                             <li>AI chỉ là công cụ hỗ trợ học tập, tuyệt đối không thay thế tư duy và quyết định của người học.</li>
                             <li>Luôn kiểm chứng độ chính xác của mọi thông tin, dữ liệu do AI cung cấp trước khi sử dụng.</li>
                             <li>Không sao chép nguyên văn văn bản AI tạo ra để nộp bài làm cá nhân.</li>
@@ -716,7 +720,7 @@
 
         // Close modal when click outside of content panel
         window.addEventListener('click', (e) => {
-            if (e.target.classList.contains('bg-dreamy-dusk/90')) {
+            if (e.target.classList.contains('bg-dreamy-dusk/70')) {
                 e.target.classList.add('hidden');
                 document.body.style.overflow = 'auto';
             }

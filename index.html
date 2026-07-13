@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quỳnh Anh | Digital Portfolio</title>
+    <title>Lê Thị Quỳnh Anh | Digital Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
@@ -57,22 +57,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(18, 22, 19, 0.8) 0%, rgba(20, 26, 22, 0.9) 100%);
-            backdrop-filter: blur(5px);
+            background: linear-gradient(180deg, rgba(18, 22, 19, 0.82) 0%, rgba(20, 26, 22, 0.92) 100%);
+            backdrop-filter: blur(6px);
             z-index: -9;
         }
 
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
         }
 
         .glass-panel-hover:hover {
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 10px 30px rgba(143, 174, 149, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 10px 30px rgba(143, 174, 149, 0.1);
         }
 
         ::-webkit-scrollbar {
@@ -90,12 +90,12 @@
         }
 
         .soft-glow-green {
-            box-shadow: 0 0 30px rgba(143, 174, 149, 0.15);
+            box-shadow: 0 0 35px rgba(143, 174, 149, 0.15);
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-6px); }
         }
         .animate-float {
             animation: float 5s ease-in-out infinite;
@@ -106,21 +106,21 @@
             background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(249,246,240,0.3) 70%);
             border-radius: 50% 0 50% 50%;
             pointer-events: none;
-            opacity: 0.5;
+            opacity: 0.4;
             animation: fall linear infinite;
         }
 
         @keyframes fall {
             0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.5; }
-            90% { opacity: 0.5; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
             100% { transform: translateY(110vh) translateX(80px) rotate(360deg); opacity: 0; }
         }
 
         #cursor-glow {
             width: 320px;
             height: 320px;
-            background: radial-gradient(circle, rgba(143, 174, 149, 0.09) 0%, rgba(0,0,0,0) 70%);
+            background: radial-gradient(circle, rgba(143, 174, 149, 0.08) 0%, rgba(0,0,0,0) 70%);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -141,7 +141,7 @@
     </video>
     <div class="ambient-overlay"></div>
 
-    <!-- Falling Petals (Daisy Vibe) -->
+    <!-- Falling Daisy Petals -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-0" id="petal-container"></div>
 
     <!-- Navigation Bar -->
@@ -227,7 +227,7 @@
                 <h2 class="font-serif text-3xl md:text-4xl text-dreamy-cream leading-tight">Khi ngôn ngữ gặp gỡ kỹ thuật số</h2>
                 <div class="w-12 h-0.5 bg-dreamy-green rounded-full"></div>
                 <p class="text-sm text-dreamy-cream/70 leading-relaxed">
-                    Chào bạn, mình là Quỳnh Anh. Xuất phát điểm là sinh viên chuyên ngành ngoại ngữ, các khái niệm lập trình hay phần mềm ban đầu có vẻ khô cứng đối với mình. Tuy nhiên, hành trình tiếp cận môn học "Nhập môn công nghệ số" đã mở ra một góc nhìn hoàn toàn mới: Công nghệ không thay thế sự tinh tế của ngôn từ, mà mang đến cho nó một hệ thống lưu trữ khoa học và khả năng sáng tạo vượt bậc.
+                    Chào bạn, mình là Quỳnh Anh. Xuất phát điểm là sinh viên chuyên ngành ngoại ngữ, các khái niệm công nghệ hay phần mềm ban đầu có vẻ khô cứng đối với mình. Tuy nhiên, hành trình tiếp cận môn học "Nhập môn công nghệ số" đã mở ra một góc nhìn hoàn toàn mới: Công nghệ không hề triệt tiêu đi tính nhân văn hay sự tinh tế của ngôn từ, mà mang đến cho nó một hệ thống lưu trữ khoa học, mạch lạc cùng khả năng sáng tạo không giới hạn.
                 </p>
             </div>
             
@@ -239,7 +239,7 @@
                     </div>
                     <h3 class="font-serif text-base text-dreamy-cream">Mục tiêu của Portfolio</h3>
                     <p class="text-xs text-dreamy-cream/60 leading-relaxed">
-                        Hệ thống hóa toàn bộ các hoạt động thực hành từ cơ bản đến phức tạp, chứng minh năng lực tự thích nghi số, xử lý dữ liệu thông minh và phản biện học thuật nghiêm túc khi tích hợp AI vào môn học chuyên ngành.
+                        Hệ thống hóa toàn bộ các hoạt động thực hành từ cơ bản đến phức tạp, chứng minh năng lực tự thích nghi số, giải quyết dữ liệu thông minh và tư duy phản biện học thuật nghiêm túc khi tích hợp AI vào môn học chuyên ngành. Portfolio này đóng vai trò như cuốn nhật ký học tập, ghi dấu sự trưởng thành tư duy số của bản thân qua từng chương học.
                     </p>
                 </div>
                 <!-- Goal Card 2 -->
@@ -249,7 +249,7 @@
                     </div>
                     <h3 class="font-serif text-base text-dreamy-cream">Dấu ấn cá nhân</h3>
                     <p class="text-xs text-dreamy-cream/60 leading-relaxed">
-                        Giữ gìn bản sắc và tiếng nói sáng tạo độc lập của người học. Mình sử dụng trí tuệ nhân tạo như một đối tác cộng tác thảo luận thay vì giao phó toàn bộ năng lực tư duy của bản thân cho máy móc.
+                        Giữ gìn bản sắc và tiếng nói sáng tạo độc lập của người học. Mình sử dụng trí tuệ nhân tạo như một đối tác cộng tác thảo luận, trợ lý bứt phá tiến độ để giải phóng năng lực thiết kế cơ bản, nhường chỗ cho tư duy độc lập và năng lực thấu cảm sâu sắc lên ngôi trong các báo cáo chuyên ngành.
                     </p>
                 </div>
             </div>
@@ -395,6 +395,12 @@
             </div>
             <hr class="border-white/10">
 
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Đối với một sinh viên ngành Ngôn ngữ học tại ULIS, việc quản lý hàng trăm tệp tiểu luận, tài liệu dịch thuật và học liệu tham khảo đòi hỏi tính hệ thống cực kỳ cao để tránh thất lạc dữ liệu. Mục tiêu của bài tập này không chỉ đơn giản là thao tác chuột, mà là kiến tạo một "kỷ luật số" (digital discipline) từ những nền móng đầu tiên. Việc quy hoạch rõ ràng và chuẩn hoá cách đặt tên tệp tin giúp tối ưu hoá tối đa thời gian tra cứu, tăng tính đồng bộ và chuyên nghiệp khi chia sẻ dữ liệu qua môi trường mạng học tập.
+                </p>
+            </div>
+
             <!-- Interactive Stepper Simulator -->
             <div class="grid md:grid-cols-12 gap-6">
                 <!-- Stepper Selection List -->
@@ -422,11 +428,11 @@
 
                     <div id="simulation-display" class="min-h-[160px] flex flex-col justify-center items-center text-center p-4">
                         <i data-lucide="monitor" class="w-12 h-12 text-dreamy-green mb-3"></i>
-                        <p id="step-desc" class="text-xs text-dreamy-cream/80 max-w-md">Nhấp chuột vào biểu tượng "File Explorer" màu vàng trên thanh Taskbar ở góc dưới màn hình máy tính để bắt đầu quy trình làm việc số.</p>
+                        <p id="step-desc" class="text-xs text-dreamy-cream/80 max-w-md">Nhấp chuột vào biểu tượng "File Explorer" màu vàng trên thanh Taskbar ở góc dưới màn hình máy tính.</p>
                     </div>
 
                     <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                        <span class="text-[10px] font-mono text-dreamy-green uppercase block">Bài học thực tiễn:</span>
+                        <span class="text-[10px] font-mono text-dreamy-green uppercase block">Bài học thực tiễn rút ra:</span>
                         <p id="step-tip" class="text-xs text-dreamy-cream/60 mt-1">Lập thói quen lưu trữ ngăn nắp ngay từ khâu tiếp cận thư mục ban đầu sẽ giảm 40% khả năng thất lạc dữ liệu về sau.</p>
                     </div>
                 </div>
@@ -446,6 +452,15 @@
                 <h3 class="font-serif text-xl md:text-2xl text-dreamy-cream mt-1">Đánh giá độ tin cậy của các tài liệu khảo sát (10 Tài liệu)</h3>
             </div>
             <hr class="border-white/10">
+
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Kiến tạo bộ lọc tư duy phản biện (critical thinking filter) vững chãi trước biển cả thông tin hỗn loạn của kỷ nguyên internet. Khi khảo cứu đề tài <em class="text-dreamy-accent italic">"Cơ hội và thách thức của việc áp dụng trí tuệ nhân tạo đến ngành ngôn ngữ học"</em>, bài học hướng đến việc rèn luyện năng lực thẩm định học liệu cho người học. Mình đặt mục tiêu phân cấp rõ ràng 10 nguồn tài liệu trong và ngoài nước thông qua các tiêu chí cốt lõi: danh tiếng cơ quan xuất bản, trình độ học thuật của tác giả, tính thực chứng của phương pháp nghiên cứu, niên giám cập nhật và sự chặt chẽ của trích dẫn khoa học. Điều này đóng vai trò quyết định, giúp giảm thiểu tối đa các lỗi trích dẫn thông tin phiến diện, sai lệch khi tiến hành nghiên cứu khoa học chuyên môn.
+                </p>
+                <p>
+                    <strong>Bài học sâu sắc:</strong> Không phải mọi thứ do AI thu thập hay hiển thị trên các diễn đàn đều mang giá trị chân lý học thuật. Việc phân loại 10 tài liệu đã dạy cho mình bài học sâu sắc về "Thẩm quyền theo bối cảnh". Mỗi nguồn tin đều có một ranh giới giá trị riêng; trong khi các nghiên cứu có bình duyệt (peer-reviewed) quốc tế từ Cambridge hay MDPI mang tính hàn lâm mẫu mực và khách quan tuyệt đối, thì các bài viết truyền thông đại chúng như CaféF hay Báo Quảng Ninh lại phản ánh nhạy bén hơi thở thời sự và xung đột tâm lý của thị trường lao động đương đại. Một người làm ngôn ngữ học bản lĩnh cần biết cách chọn lọc và kết hợp hài hoà các nguồn tin để luận điểm của mình luôn vững chãi và đa chiều.
+                </p>
+            </div>
 
             <div class="flex flex-wrap gap-2 text-xs">
                 <button class="px-3 py-1.5 rounded-full bg-dreamy-green text-dreamy-dark font-medium" onclick="filterDocs('all')">Tất cả tài liệu</button>
@@ -486,11 +501,20 @@
             </div>
             <hr class="border-white/10">
 
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Học cách làm chủ ngôn ngữ máy để điều khiển mô hình ngôn ngữ lớn (LLM) một cách sắc bén. Mục tiêu cốt lõi của bài tập là phá vỡ lối giao tiếp tự phát, mơ hồ để áp đặt một hệ thống tư duy có cấu trúc vững chãi lên AI thông qua quy trình thiết kế prompt 3 cấp độ: Cơ bản, Cải tiến, Nâng cao dựa trên công thức mẫu mực: <strong class="text-dreamy-green">Vai trò + Nhiệm vụ + Đối tượng + Bối cảnh + Định dạng đầu ra + Ràng buộc nghiêm ngặt</strong>. Mình thực nghiệm trên 3 kịch bản thực tế: tóm tắt báo cáo kinh tế thương mại VnEconomy, phân tích thấu đáo từ lóng "Thần thái" dưới lăng kính xã hội học ngôn ngữ, và biên soạn ngân hàng đề thi đánh giá báo chí học thuật.
+                </p>
+                <p>
+                    <strong>Bài học sâu sắc:</strong> "Chất lượng của câu trả lời phụ thuộc hoàn toàn vào chiều sâu của câu hỏi." Khi ta viết câu lệnh hời hợt, AI sẽ trả về những đoạn văn bản nông cạn, khuôn mẫu. Nhưng một khi ta thiết lập cho nó một vai trò cụ thể, ấn định bối cảnh rõ ràng và thiết lập các "rào chắn ràng buộc" (chỉ sử dụng số liệu có sẵn, không tự ý suy diễn, khống chế độ dài), AI ngay lập tức chuyển hóa thành một cộng sự thông thái xuất sắc. Việc ứng dụng kỹ năng ngôn ngữ của mình để tối ưu hóa prompt chính là chìa khóa mở ra kho báu tri thức của kỷ nguyên nhân tạo.
+                </p>
+            </div>
+
             <!-- Task Selector Tabs -->
-            <div class="flex border-b border-white/10 overflow-x-auto">
-                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-dreamy-green text-dreamy-green whitespace-nowrap" onclick="switchPromptTask(1)">Tác vụ 1: Tóm tắt kinh tế</button>
-                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white whitespace-nowrap" onclick="switchPromptTask(2)">Tác vụ 2: Phân tích "Thần thái"</button>
-                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white whitespace-nowrap" onclick="switchPromptTask(3)">Tác vụ 3: Thiết kế câu hỏi bài giảng</button>
+            <div class="flex border-b border-white/10">
+                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-dreamy-green text-dreamy-green" onclick="switchPromptTask(1)">Tác vụ 1: Tóm tắt bài báo kinh tế</button>
+                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white" onclick="switchPromptTask(2)">Tác vụ 2: Phân tích "Thần thái"</button>
+                <button class="prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white" onclick="switchPromptTask(3)">Tác vụ 3: Thiết kế câu hỏi bài giảng</button>
             </div>
 
             <!-- Dynamic Prompt Showcase Grid -->
@@ -513,8 +537,13 @@
             </div>
             <hr class="border-white/10">
 
-            <div class="text-xs text-dreamy-cream/70 leading-relaxed mb-2">
-                <strong>Chủ đề dự án lớn:</strong> "Giá trị văn hóa của Bún Chả trong dòng chảy ẩm thực Việt Nam tại Hà Nội" (Môn Cơ sở văn hoá Việt Nam). Dưới đây là mô phỏng bảng quản lý công việc nhóm trực quan:
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Chuyển hóa hoạt động làm việc nhóm từ phương thức gặp mặt truyền thống sang mô hình quản trị dự án số đồng bộ, tối ưu hóa tối đa thời gian thực hiện. Bài thực hành đặt ra mục tiêu huấn luyện năng lực điều phối của một nhóm trưởng khi triển khai dự án nghiên cứu văn hóa học: <em class="text-dreamy-accent italic">"Giá trị văn hoá của Bún Chả trong dòng chảy ẩm thực Việt Nam tại Hà Nội"</em> (Môn Cơ sở văn hoá Việt Nam). Mình học cách phân rã mục tiêu lớn thành các nhiệm vụ cụ thể trên Trello để theo sát tiến độ hàng ngày, tổ chức đồng biên tập bài viết theo thời gian thực trên Google Docs và quản lý phản hồi khẩn cấp qua nền tảng liên lạc nhóm Zalo.
+                </p>
+                <p>
+                    <strong>Bài học sâu sắc:</strong> Mọi công cụ số thông minh sẽ đều trở nên vô hiệu nếu thiếu đi tính kỷ luật của tập thể và nghệ thuật thấu cảm của người dẫn dắt. Mình đã học được bài học đắt giá về cách xử lý khủng hoảng tiến độ khi thành viên trễ deadline Trello, cách tagging tập trung để không làm phiền thông tin của thành viên, và phương pháp xử lý bất đồng quan điểm khi biên tập chung trên Google Docs bằng cách chủ động gọi điện đàm thoại giải quyết ngay vấn đề thay vì nhắn tin dồn dập dễ gây trôi và hiểu lầm ý. Trưởng nhóm thực thụ là người biết cách biến công cụ thành cầu nối tạo dựng sự kết nối và đồng lòng trong tập thể.
+                </p>
             </div>
 
             <!-- Mock Trello Board -->
@@ -555,9 +584,8 @@
             <div class="bg-white/5 p-4 rounded-xl border border-white/5 mt-4">
                 <span class="text-xs font-semibold text-dreamy-green flex items-center gap-1.5 mb-2"><i data-lucide="history" class="w-4 h-4"></i> Nhật ký sửa đổi (Google Docs & Zalo Logs):</span>
                 <ul class="text-xs space-y-1.5 text-dreamy-cream/70">
-                    <li><strong class="text-dreamy-cream">11:13, 7 Tháng 5:</strong> Quỳnh Anh cập nhật nội dung mở đầu bài và liên kết các đề mục tài liệu tham khảo chính gốc theo chuẩn APA. Sửa văn phong học thuật, triệt tiêu lỗi lặp từ.</li>
+                    <li><strong class="text-dreamy-cream">11:13, 7 Tháng 5:</strong> Quỳnh Anh cập nhật nội dung mở đầu bài và liên kết các đề mục tài liệu tham khảo chính gốc theo chuẩn APA.</li>
                     <li><strong class="text-dreamy-cream">10:46, 8 Tháng 5:</strong> Quỳnh Anh gửi bản thông điệp nhắc nhở hoàn thiện phần phân tích lên Zalo: "Mọi người cố gắng hoàn thành tệp Google Docs trước ngày mai để mình tổng hợp."</li>
-                    <li><strong class="text-dreamy-cream">Mâu thuẫn & Giải pháp:</strong> Khi các thành viên viết đè chéo văn bản trên Google Docs, mình đã tận dụng chức năng "Version History" để rà soát lỗi, khôi phục nội dung cũ có giá trị và kết hợp đàm thoại trực tiếp trên nhóm Zalo để đi đến sự đồng thuận về mặt hệ thống logic.</li>
                 </ul>
             </div>
         </div>
@@ -576,6 +604,15 @@
             </div>
             <hr class="border-white/10">
 
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Thực nghiệm ranh giới của sáng tạo đa phương tiện (multimedia creativity) thông qua việc kết hợp chuỗi công cụ AI tạo sinh khác nhau để hoàn thành một sản phẩm infographic văn hoá xã hội hoàn chỉnh. Bài thực hành đặt ra mục tiêu phân tích sâu sắc các hiện tượng biến dạng ngôn ngữ, chuyển nghĩa của tiếng lóng Gen Z phổ biến hiện nay, sau đó trực quan hoá chúng để tạo nên sự kết nối thế hệ. Mình đặt ra ranh giới phối hợp rõ rệt: AI tạo sinh hỗ trợ gợi ý ý tưởng thô và phác hoạ mỹ thuật độc bản, còn con người chịu trách nhiệm kiểm chứng học thuật, Việt hoá ngôn từ và cân bằng tỷ lệ mỹ thuật để tạo nên một sản phẩm xuất sắc nhất.
+                </p>
+                <p>
+                    <strong>Bài học sâu sắc:</strong> AI là một người cộng sự nghệ thuật vô song nhưng hoàn toàn thiếu đi "linh hồn văn hoá bản địa". Mô hình Midjourney có thể tạo ra bức vẽ siêu thực đầy lôi cuốn nhưng lại viết ra những ký tự loằng ngoằng vô nghĩa, lỗi phông chữ tiếng Việt nghiêm trọng. Canva AI gợi ý bảng phối màu bắt mắt nhưng bố cục còn thô sơ, mang tính đại trà. Chính sự can thiệp thủ công tỉ mỉ của mình - từ việc chọn phông chữ Inter/Montserrat sắc nét, tinh chỉnh sắc độ tương phản để hỗ trợ người dùng có thị lực yếu (Web Accessibility), cho đến việc tự tay biên soạn lại các cơ chế biến thể từ ngữ ngôn ngữ học chuẩn xác nhất - mới là chất xúc tác biến một bản vẽ công nghệ vô hồn thành một tác phẩm truyền thông xã hội giàu giá trị học thuật.
+                </p>
+            </div>
+
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Slang interactive selection list -->
                 <div class="flex flex-col gap-3">
@@ -584,7 +621,7 @@
                         "Chay" (Cày chay, nói chuyện chay)
                     </div>
                     <div class="slang-btn p-3 rounded-xl glass-panel text-dreamy-cream cursor-pointer text-xs" onclick="selectSlang('flex')">
-                        "Flexing / Flex" (Khoe khoang tài sản)
+                        "Flexing / Flex" (Khoe khoang thành tích)
                     </div>
                     <div class="slang-btn p-3 rounded-xl glass-panel text-dreamy-cream cursor-pointer text-xs" onclick="selectSlang('toptop')">
                         "Tóp tóp / Top Top" (TikTok parody)
@@ -598,36 +635,29 @@
                 </div>
 
                 <!-- Descriptive Output Box -->
-                <div class="bg-[#0d100e] rounded-xl p-5 border border-white/5 flex flex-col justify-between min-h-[300px]">
-                    <div class="flex flex-col gap-4">
-                        <div class="flex items-center justify-between border-b border-white/5 pb-2">
-                            <span class="text-xs font-medium text-dreamy-green" id="slang-title">"Chay" (Cày chay, nói chuyện chay)</span>
-                            <span class="text-[10px] text-dreamy-cream/50 uppercase">Sociolinguistics</span>
-                        </div>
-                        
-                        <p class="text-xs text-dreamy-cream/80 leading-relaxed" id="slang-origin">
-                            <strong>Nguồn gốc:</strong> Gốc Hán-Việt (trai 齋), nguyên nghĩa cổ điển biểu thị trạng thái ăn uống thanh tịnh, ăn thực vật hoặc không thêm các loại gia vị nồng.
-                        </p>
-                        <p class="text-xs text-dreamy-cream/80 leading-relaxed" id="slang-morph">
-                            <strong>Cơ chế hình thành từ:</strong> Chuyển nghĩa / Mở rộng ngữ nghĩa (Semantic Shift / Broadening). Trong ngôn ngữ mạng Gen Z, 'chay' được tách rời khỏi lĩnh vực ẩm thực thuần túy để biểu thị các hành động diễn ra thiếu hụt các công cụ phụ trợ thông thường (ví dụ: 'học chay' - học lý thuyết suông không có tài liệu hay công nghệ hỗ trợ; 'nhắn tin chay' - nói chuyện thô không đính kèm biểu tượng cảm xúc hay meme vui vẻ).
-                        </p>
+                <div class="bg-[#0d100e] rounded-xl p-5 border border-white/5 flex flex-col gap-4">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span class="text-xs font-medium text-dreamy-green" id="slang-title">"Chay"</span>
+                        <span class="text-[10px] text-dreamy-cream/50 uppercase">Sociolinguistics</span>
                     </div>
+                    
+                    <p class="text-xs text-dreamy-cream/80 leading-relaxed" id="slang-origin">
+                        <strong>Nguồn gốc:</strong> Gốc Hán-Việt (trai 齋), nghĩa cổ là thanh tịnh hoặc không ăn thịt.
+                    </p>
+                    <p class="text-xs text-dreamy-cream/80 leading-relaxed" id="slang-morph">
+                        <strong>Cơ chế hình thành từ:</strong> Chuyển nghĩa / Mở rộng ngữ nghĩa (Semantic Shift / Broadening) biểu thị các trạng thái thiếu hụt công cụ đi kèm (ví dụ: học chay, nhắn tin chay không dùng emoji).
+                    </p>
 
-                    <div class="bg-white/5 p-3 rounded-lg border border-white/5 mt-4">
+                    <div class="bg-white/5 p-3 rounded-lg border border-white/5 mt-auto">
                         <span class="text-[10px] font-mono text-dreamy-accent block">Midjourney Visual Tool Prompt:</span>
-                        <p id="slang-prompt" class="text-[10px] text-dreamy-cream/60 mt-1 italic">"A modern creative pop-art style illustration representing Gen Z language..."</p>
+                        <p class="text-[10px] text-dreamy-cream/60 mt-1 italic">"A modern creative pop-art style illustration representing Gen Z language..."</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="bg-white/5 p-4 rounded-xl border border-white/5 mt-2 text-xs leading-relaxed text-dreamy-cream/80">
-                <span class="text-xs font-semibold text-dreamy-green block mb-1">Nhật ký quy trình sáng tạo tích hợp AI:</span>
-                Mình đã sử dụng <strong class="text-dreamy-green">Google Gemini</strong> để brainstorm ra các từ lóng thịnh hành nhất của giai đoạn 2025-2026 vì công cụ này có tính cập nhật dữ liệu thời gian thực cực kỳ tốt. Sau đó, mình đưa danh sách này sang <strong class="text-dreamy-green">ChatGPT</strong> để tối ưu hóa cấu trúc câu từ của bản mô tả học thuật, giúp nâng cao tính hàn lâm nhưng vẫn giữ được nét dí hỏm. <strong class="text-dreamy-green">Midjourney</strong> được dùng để thiết kế hình ảnh chủ đạo (Key Visual) theo trường phái Cyberpunk giao thoa giữa góc học tập truyền thống của Việt Nam và làn sóng tương lai. Gặp lỗi chữ loằng ngoằng trong bong bóng thoại của Midjourney, mình đã dùng phần mềm Canva để xoá vùng chữ bị lỗi và ghi đè kiểu chữ Việt hoá chuẩn chỉnh.
             </div>
         </div>
     </div>
 
-    <!-- Modal 6: AI Ethics & Do's vs Don't visual dashboard -->
+    <!-- Modal 6: AI Ethics & Do's vs Don'ts visual dashboard -->
     <div id="modal-ex6" class="fixed inset-0 z-50 bg-[#121613]/95 backdrop-blur-md hidden justify-center items-center p-4">
         <div class="glass-panel max-w-4xl w-full max-h-[85vh] overflow-y-auto rounded-2xl p-6 md:p-8 flex flex-col gap-6 relative animate-fade-in">
             <button onclick="toggleDetail('modal-ex6')" class="absolute top-6 right-6 text-dreamy-cream/50 hover:text-white">
@@ -640,8 +670,13 @@
             </div>
             <hr class="border-white/10">
 
-            <div class="text-xs text-dreamy-cream/80 leading-relaxed mb-1">
-                <strong>Chính sách đào tạo của ĐHQGHN:</strong> AI được định vị rõ ràng là công cụ hỗ trợ tư duy chứ không phải thực thể thay thế hoàn toàn người học. Nhà trường khuyến khích sinh viên tự tin tích hợp công nghệ mới, nhưng đòi hỏi sự minh bạch tuyệt đối về nguồn gốc thông tin và chịu trách nhiệm tối hậu đối với mọi sản phẩm học thuật nộp về hệ thống.
+            <div class="text-xs md:text-sm text-dreamy-cream/80 flex flex-col gap-4 leading-relaxed">
+                <p>
+                    <strong>Mục tiêu chi tiết:</strong> Kiến tạo và thiết lập một bộ khung đạo đức học thuật vững chãi trước làn sóng tràn ngập của công nghệ trí tuệ nhân tạo tạo sinh trong học đường. Bài tập đặt mục tiêu hướng người học nghiên cứu sâu sắc các chỉ đạo chính sách tiên phong của Đại học Quốc gia Hà Nội (đơn vị bắt buộc đưa môn học ứng dụng AI vào giảng dạy toàn diện), nhận diện rạch ròi ranh giới giữa việc "Hỗ trợ học tập lành mạnh" với hành vi "Gian lận đạo văn", từ đó tự tay soạn thảo bản tuyên ngôn liêm chính học thuật cá nhân gồm 7 nguyên tắc đạo đức chuẩn mực phục vụ xuyên suốt quá trình học tập và nghiên cứu khoa học sau này.
+                </p>
+                <p>
+                    <strong>Bài học sâu sắc:</strong> "Sự liêm chính học thuật không phải là khẩu hiệu sáo rỗng, mà là danh dự của người nghiên cứu." Việc lạm dụng sao chép trực tiếp văn bản thô từ AI không chỉ là hành vi dối trá, mà còn tự tay triệt tiêu đi năng lực tư duy độc lập, kỹ năng viết lách và diễn đạt của chính bản thân mình - những giá trị cốt lõi của một sinh viên ngoại ngữ ULIS. Mình hiểu rằng, một người sử dụng công nghệ có bản lĩnh là người biết dùng AI để phản biện lại các giả thuyết của mình, khơi mở ý tưởng thô, chứ tuyệt đối không bao giờ cho phép AI cướp đi tiếng nói cá nhân và ngòi bút sáng tạo độc lập của chính mình.
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -649,9 +684,9 @@
                 <div class="bg-dreamy-green/5 border border-dreamy-green/20 rounded-2xl p-5 flex flex-col gap-3">
                     <span class="text-xs font-semibold text-dreamy-green flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> NÊN LÀM (Do's)</span>
                     <ul class="text-xs space-y-2 text-dreamy-cream/80 pl-4 list-disc">
-                        <li><strong>Kiểm chứng thông tin:</strong> Luôn so khớp nội dung do AI tạo ra với giáo trình và tài liệu chính thống của môn học.</li>
-                        <li><strong>Trích dẫn đầy đủ:</strong> Khai báo trung thực sự can thiệp của các mô hình AI khi sử dụng để gợi mở ý tưởng.</li>
-                        <li><strong>Phát triển tư duy độc lập:</strong> Tự biên soạn lại toàn bộ bài viết, chỉ dùng AI để tối ưu tiến độ nghiên cứu.</li>
+                        <li><strong>Kiểm chứng thông tin:</strong> Luôn so khớp nội dung do AI tạo ra với giáo trình và tài liệu tin cậy.</li>
+                        <li><strong>Trích dẫn đầy đủ:</strong> Ghi nhận sự trợ giúp của các mô hình AI và công khai lịch sử phiên bản.</li>
+                        <li><strong>Sáng tạo bài viết:</strong> Chỉ dùng AI làm điểm tựa brainstorm, tự tay biên soạn lại toàn bộ bài viết học thuật.</li>
                     </ul>
                 </div>
 
@@ -659,16 +694,11 @@
                 <div class="bg-dreamy-accent/5 border border-dreamy-accent/20 rounded-2xl p-5 flex flex-col gap-3">
                     <span class="text-xs font-semibold text-dreamy-accent flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> KHÔNG NÊN LÀM (Don'ts)</span>
                     <ul class="text-xs space-y-2 text-dreamy-cream/80 pl-4 list-disc">
-                        <li><strong>Sao chép nguyên văn:</strong> Bê nguyên xi văn bản thô từ ChatGPT/Gemini rồi nộp trực tiếp lên hệ thống LMS.</li>
-                        <li><strong>Bịa đặt nguồn:</strong> Tin tưởng vào các tài liệu tham khảo giả mạo do các mô hình ngôn ngữ lớn ngụy tạo ra.</li>
-                        <li><strong>Bảo mật kém:</strong> Đưa toàn bộ các nghiên cứu độc quyền hoặc dữ liệu học tập nhạy cảm lên máy chủ AI.</li>
+                        <li><strong>Sao chép nguyên văn:</strong> Copy-paste thô từ ChatGPT/Gemini rồi nộp như bài viết cá nhân tự biên soạn.</li>
+                        <li><strong>Bịa đặt nguồn:</strong> Sử dụng các trích dẫn giả mạo do AI tạo sinh ngụy tạo không qua kiểm chứng thực tế.</li>
+                        <li><strong>Chia sẻ dữ liệu nhạy cảm:</strong> Nhập thông tin bảo mật, nghiên cứu chưa công bố lên máy chủ AI công cộng.</li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
-                <span class="text-xs font-semibold text-dreamy-accent block mb-1">Mô tả thiết kế Infographic có trách nhiệm:</span>
-                Mình đã phân chia bố cục của biểu đồ đồ họa này thành 2 mảng màu đối lập: Mảng màu xanh đại diện cho các hành vi học tập có đạo đức (Do's) đi kèm biểu tượng hình chiếc kính lúp phóng đại đại diện cho hoạt động kiểm chứng nghiêm túc; Mảng màu đỏ đại diện cho các hành vi gian lận (Don'ts) với biểu tượng ổ khóa bị chặn đại diện cho việc rò rỉ dữ liệu và nguy cơ phụ thuộc quá mức vào máy móc.
             </div>
         </div>
     </div>
@@ -870,16 +900,16 @@
 
         // 6. REFERENCES DATABASE POPULATING & FILTER (EXERCISE 2)
         const referencesData = [
-            { id: 1, author: "Triệu Thị Trang, (2025)", title: "Trí tuệ nhân tạo: Cơ hội và thách thức trong đào tạo ngoại ngữ tại Việt Nam.", publication: "Tạp chí KH&CN Việt Nam (VJST)", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green", note: "Bài phân tích sử dụng phương pháp tổng hợp phân tích thực trạng đào tạo tiếng Anh thương mại tại trường ĐH Thương mại, kết nối thực tế chiến lược chuyển đổi số quốc gia." },
-            { id: 2, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo sinh ngữ trong giáo dục ngôn ngữ: Cơ hội đổi mới, giới hạn và thách thức đạo đức.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green", note: "Nguồn chính thống của Bộ GD&ĐT, đưa ra lập luận đa chiều về ranh giới đạo đức của dịch thuật máy và học tập chủ động." },
-            { id: 3, author: "Adam John Privitera, Ng, S., et al., (2024)", title: "AI and Aphasia in the Digital Age: A Critical Review.", publication: "Brain sciences, 14(4), pp.383–383. MDPI", reliability: "Rất cao (Tier 1)", tier: "Tier1", badgeColor: "bg-dreamy-accent/15 text-dreamy-accent", note: "Nghiên cứu quốc tế áp dụng quy trình tổng hợp hệ thống PRISMA sàng lọc hàng ngàn bài báo từ Web of Science và Scopus." },
-            { id: 4, author: "MEDIATECH, (2026)", title: "Tại sao trí tuệ nhân tạo cần học những ngôn ngữ mới?", publication: "Baoquangninh.vn - Tin tức địa phương", reliability: "Trung bình", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70", note: "Bài tin tức phổ biến kiến thức đại chúng, lấy ví dụ thực tiễn về nỗ lực đa ngôn ngữ hóa mô hình GPT-4 để lưu trữ di sản văn hóa số." },
-            { id: 5, author: "Đông, T., (2025)", title: "Ngành ngôn ngữ đang khủng hoảng: AI dạy, nói, dịch quá nhanh - 4 năm học chưa chắc bằng 30 giây tra app!", publication: "Cafef.vn - Diễn đàn kinh tế xã hội", reliability: "Trung bình", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70", note: "Phản ánh trực giác lo ngại của thị trường lao động bằng phương pháp báo chí điều tra và phỏng vấn trực tiếp sinh viên ngoại ngữ mất phương hướng." },
-            { id: 6, author: "Tú Anh, (2025)", title: "Sinh viên Ngôn ngữ Anh lao đao thời trí tuệ nhân tạo.", publication: "Báo Giáo dục và Thời đại Online", reliability: "Khá", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70", note: "Phân tích dữ liệu đóng cửa ngành học tại một số quốc gia láng giềng và tỷ lệ sụt giảm tuyển dụng phiên dịch viên." },
-            { id: 7, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo trong giáo dục ngôn ngữ: Năng lực phản biện và kỹ thuật gợi lệnh trong kỷ nguyên số.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green", note: "Khảo cứu chuyên sâu việc xây dựng năng lực Digital Literacy cho sinh viên ngoại ngữ thông qua kỹ thuật Prompt Engineering bài bản." },
-            { id: 8, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo và tư duy phản biện trong giáo dục tiếng Anh: Cơ hội, thách thức và định hướng phát triển.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green", note: "Áp dụng các lý thuyết thang nhận thức Bloom để kích thích hoạt động phân tích, thẩm định của học viên thay vì phụ thuộc công nghệ." },
-            { id: 9, author: "Rsisinternational.org, (2025)", title: "Online Language Learning Apps: A Revolution in English Education.", publication: "International Journal of Research and Innovation in Social Science (IJRISS)", reliability: "Khá", tier: "Tier1", badgeColor: "bg-white/10 text-dreamy-cream/70", note: "Khảo sát thực chứng định lượng thu thập dữ liệu bảng hỏi từ hàng trăm giảng viên ngoại ngữ tại Nigeria về mức độ sẵn sàng tích hợp ICT." },
-            { id: 10, author: "Macinska, S. and Vinkler, A., (n.d.)", title: "The Role of AI in Language Learning: Research Evidence and Strategies for Success.", publication: "Cambridge University Press White Paper", reliability: "Tối cao (Tier 1)", tier: "Tier1", badgeColor: "bg-dreamy-accent/15 text-dreamy-accent", note: "White Paper chính thống phát hành bởi nhà xuất bản uy tín Cambridge, tổng hợp dữ liệu học tập lớn từ Cambridge Learner Corpus." }
+            { id: 1, author: "Triệu Thị Trang, (2025)", title: "Trí tuệ nhân tạo: Cơ hội và thách thức trong đào tạo ngoại ngữ tại Việt Nam.", publication: "Tạp chí KH&CN Việt Nam (VJST)", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green" },
+            { id: 2, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo sinh ngữ trong giáo dục ngôn ngữ: Cơ hội đổi mới, giới hạn và thách thức đạo đức.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green" },
+            { id: 3, author: "Adam John Privitera, Ng, S., et al., (2024)", title: "AI and Aphasia in the Digital Age: A Critical Review.", publication: "Brain sciences, 14(4), pp.383–383. MDPI", reliability: "Rất cao (Tier 1)", tier: "Tier1", badgeColor: "bg-dreamy-accent/15 text-dreamy-accent" },
+            { id: 4, author: "MEDIATECH, (2026)", title: "Tại sao trí tuệ nhân tạo cần học những ngôn ngữ mới?", publication: "Baoquangninh.vn - Tin tức địa phương", reliability: "Trung bình", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70" },
+            { id: 5, author: "Đông, T., (2025)", title: "Ngành ngôn ngữ đang khủng hoảng: AI dạy, nói, dịch quá nhanh - 4 năm học chưa chắc bằng 30 giây tra app!", publication: "Cafef.vn - Diễn đàn kinh tế xã hội", reliability: "Trung bình", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70" },
+            { id: 6, author: "Tú Anh, (2025)", title: "Sinh viên Ngôn ngữ Anh lao đao thời trí tuệ nhân tạo.", publication: "Báo Giáo dục và Thời đại Online", reliability: "Khá", tier: "Media", badgeColor: "bg-white/10 text-dreamy-cream/70" },
+            { id: 7, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo trong giáo dục ngôn ngữ: Năng lực phản biện và kỹ thuật gợi lệnh trong kỷ nguyên số.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green" },
+            { id: 8, author: "Tạp chí Giáo dục - Bộ GD&ĐT, (2016)", title: "Trí tuệ nhân tạo và tư duy phản biện trong giáo dục tiếng Anh: Cơ hội, thách thức và định hướng phát triển.", publication: "Tạp chí Giáo dục học thuật", reliability: "Cao", tier: "Tier1", badgeColor: "bg-dreamy-green/15 text-dreamy-green" },
+            { id: 9, author: "Rsisinternational.org, (2025)", title: "Online Language Learning Apps: A Revolution in English Education.", publication: "International Journal of Research and Innovation in Social Science (IJRISS)", reliability: "Khá", tier: "Tier1", badgeColor: "bg-white/10 text-dreamy-cream/70" },
+            { id: 10, author: "Macinska, S. and Vinkler, A., (n.d.)", title: "The Role of AI in Language Learning: Research Evidence and Strategies for Success.", publication: "Cambridge University Press White Paper", reliability: "Tối cao (Tier 1)", tier: "Tier1", badgeColor: "bg-dreamy-accent/15 text-dreamy-accent" }
         ];
 
         function populateRefTable(dataList) {
@@ -892,7 +922,7 @@
                     <td class="py-3 pr-3 font-mono text-dreamy-green">${doc.id}</td>
                     <td class="py-3 pr-4 font-medium text-dreamy-cream">${doc.author} <br><span class="text-[10px] text-dreamy-cream/50 leading-relaxed block mt-0.5">${doc.title}</span></td>
                     <td class="py-3 pr-4 text-[11px] text-dreamy-cream/60">${doc.publication}</td>
-                    <td class="py-3 pr-4 text-[11px] text-dreamy-cream/50 italic">${doc.note}</td>
+                    <td class="py-3 pr-4 text-[11px] text-dreamy-cream/50 italic">${doc.tier === 'Tier1' ? 'Đã qua phản biện khoa học chuyên sâu' : 'Phản ánh dư luận / thực tiễn thời sự'}</td>
                     <td class="py-3"><span class="px-2.5 py-1 rounded-full text-[10px] font-semibold ${doc.badgeColor}">${doc.reliability}</span></td>
                 `;
                 tbody.appendChild(row);
@@ -916,66 +946,68 @@
             1: [
                 {
                     title: "Phiên bản 1: Prompt Cơ bản",
-                    code: "Hãy tóm tắt ngắn gọn bài báo sau bằng tiếng Việt, nêu rõ nội dung chính, số liệu quan trọng và kết luận của bài viết: https://en.vneconomy.vn/hanoi-retail-property-market-sees-rising-supply-and-rents-amid-shifting-consumer-trends.htm",
-                    output: "Bài báo phân tích thị trường bất động sản bán lẻ Hà Nội đang đối mặt với sự cạnh tranh khốc liệt. Nguồn cung tăng mạnh dẫn tới việc giá thuê mặt bằng biến động lớn, đòi hỏi các thương hiệu phải điều chỉnh chiến lược."
+                    code: "Hãy tóm tắt ngắn gọn bài báo sau bằng tiếng Việt, nêu rõ nội dung chính, số liệu quan trọng và kết luận của bài viết: en.vneconomy.vn/hanoi-retail-property-market-sees-rising-supply-and-rents-amid-shifting-consumer-trends.htm",
+                    output: "Bài báo cho biết thị trường bất động sản bán lẻ tại Hà Nội trong quý I/2026 tiếp tục ghi nhận xu hướng tăng nguồn cung mới nhưng mức độ cạnh tranh gay gắt hơn..."
                 },
                 {
                     title: "Phiên bản 2: Prompt Cải tiến (Định hướng cấu trúc)",
-                    code: "Hãy tóm tắt bài báo 'Hanoi retail property market sees...' của VnEconomy bằng tiếng Việt theo cấu trúc sau:\n- Chủ đề chính của bài báo\n- Tình hình nguồn cung bất động sản bán lẻ tại Hà Nội trong quý I/2026\n- Diễn biến tỷ lệ lấp đầy và giá thuê\n- Nguyên nhân dẫn đến sự thay đổi của thị trường\n- Dự báo xu hướng thị trường đến năm 2028\nYêu cầu: viết ngắn gọn, dễ hiểu, giữ lại các số liệu quan trọng, không thêm thông tin ngoài bài báo.",
-                    output: "- Chủ đề chính: Sự dịch chuyển xu hướng tiêu dùng tác động đến mặt bằng bán lẻ Hà Nội.\n- Nguồn cung mới: Ghi nhận thêm hơn 51.000 m2 diện tích bán lẻ mới.\n- Tỷ lệ lấp đầy & Giá thuê: Đạt 86,5% lấp đầy, giá mặt bằng trung bình đạt 1,3 triệu đồng/m2/tháng.\n- Nguyên nhân: Sự bùng nổ của thương mại điện tử và sự thay đổi hành vi tiêu dùng trải nghiệm."
+                    code: "Hãy tóm tắt bài báo 'Hanoi retail property market sees...' của VnEconomy bằng tiếng Việt theo cấu trúc sau:\n- Chủ đề chính\n- Nguồn cung bất động sản bán lẻ tại Hà Nội quý I/2026\n- Tỷ lệ lấp đầy và giá thuê\n- Nguyên nhân thị trường thay đổi\n- Dự báo xu hướng đến năm 2028\nYêu cầu: Viết ngắn gọn, dễ hiểu, giữ lại các số liệu quan trọng, không tự ý suy đoán thêm thông tin.",
+                    output: "Chủ đề chính: Phân tích sự dịch chuyển của thị trường mặt bằng bán lẻ Hà Nội.\nNguồn cung mới: Thêm hơn 51.000 m2 mặt bằng bán lẻ mới..."
                 },
                 {
                     title: "Phiên bản 3: Prompt Nâng cao (Phân vai chuyên gia)",
-                    code: "Bạn là một chuyên gia phân tích thị trường bất động sản thương mại. Hãy đọc và tóm tắt bài báo 'Hanoi retail property market...' của VnEconomy bằng tiếng Việt.\nTrước khi viết bản tóm tắt, hãy xác định các ý chính của bài theo các nhóm: nguồn cung, tỷ lệ lấp đầy, giá thuê, nguyên nhân biến động, và triển vọng thị trường.\nHãy trình bày kết quả theo mẫu sau:\n- Tóm tắt 3–4 câu: Nêu ngắn gọn nội dung chính.\n- Các số liệu quan trọng: Liệt kê 4–5 số liệu nổi bật.\n- Nhận định chính: Phân tích xu hướng thị trường.\n- Một câu kết luận: Rút ra thông điệp chính.",
-                    output: "- Tóm tắt: Trong quý I/2026, thị trường bán lẻ Hà Nội chứng kiến bước phát triển mạnh mẽ về nguồn cung và giá thuê nhờ làn sóng dịch chuyển của người tiêu dùng và sự trỗi dậy của xu hướng mua sắm trải nghiệm.\n- Số liệu quan trọng: Diện tích mới 51.000 m2; Tổng nguồn cung đạt 1,43 triệu m2; Tỷ lệ lấp đầy trung bình 86,5%; Giá thuê mặt bằng đạt 1,3 triệu đồng/m2/tháng (xấp xỉ 50 USD).\n- Nhận định: Thị trường đang mở rộng nhanh chóng ra các vùng ven đô do quỹ đất trung tâm cạn kiệt.\n- Kết luận: Sự thay đổi cấu trúc bán lẻ đòi hỏi các đơn vị vận hành phải không ngừng cải tiến không gian sáng tạo."
+                    code: "Bạn là một chuyên gia phân tích thị trường bất động sản thương mại. Hãy đọc và tóm tắt bài báo sau bằng tiếng Việt. Trước khi viết tóm tắt, hãy gom nhóm dữ liệu theo các tiêu chí: nguồn cung, tỷ lệ lấp đầy, giá thuê, nguyên nhân biến động và triển vọng thị trường.\nĐịnh dạng đầu ra:\n- Tóm tắt 3-4 câu chính\n- Liệt kê 4-5 số liệu quan trọng\n- Nhận định xu hướng\n- Một câu kết luận cô đọng\nYêu cầu: Văn phong khách quan, cô đọng, không thêm các nhận định không có căn cứ từ bài báo.",
+                    output: "Tóm tắt: Bài báo cho thấy thị trường bất động sản bán lẻ Hà Nội ghi nhận sự mở rộng mạnh mẽ về quy mô, đặc biệt là các khu vực ngoài trung tâm...\nSố liệu quan trọng: Ghi nhận 51.000 m2 diện tích bán lẻ mới, tổng nguồn cung 1,43 triệu m2..."
                 }
             ],
             2: [
                 {
                     title: "Phiên bản 1: Prompt Cơ bản",
                     code: "Hãy giải thích ngắn gọn ý nghĩa của từ 'thần thái' bằng tiếng Việt. Cho một vài ví dụ dễ hiểu về cách dùng từ này trong đời sống.",
-                    output: "'Thần thái' biểu thị sắc thái, vẻ bề ngoài biểu hiện tâm hồn, sự tự tin và khí chất bên trong của một con người qua nét mặt, ánh mắt."
+                    output: "'Thần thái' là vẻ biểu hiện toát ra từ khuôn mặt, ánh mắt, dáng vẻ, cử chỉ của một người, thể hiện khí chất hoặc phong cách của người đó."
                 },
                 {
                     title: "Phiên bản 2: Prompt Cải tiến (Định hướng cấu trúc)",
-                    code: "Hãy giải thích từ 'thần thái' bằng tiếng Việt theo cấu trúc sau:\n- Nghĩa chung của từ 'thần thái'\n- Các yếu tố tạo nên thần thái, ví dụ: ánh mắt, nét mặt, dáng điệu, phong cách biểu hiện\n- Sự khác nhau giữa 'thần thái' và ngoại hình\n- Ví dụ sử dụng từ 'thần thái' trong câu\nYêu cầu: giải thích dễ hiểu, phù hợp với học sinh/sinh viên, có ví dụ gần gũi.",
-                    output: "- Nghĩa chung: Thần thái là vẻ sống động rạng rỡ toát ra từ phong cách biểu hiện bên ngoài phản ánh khí chất tự tin bên trong.\n- Yếu tố cấu thành: Ánh mắt kiên định, nụ cười rạng rỡ, dáng đi thẳng lưng ung dung tự tại.\n- Khác biệt ngoại hình: Ngoại hình là cấu trúc vật lý tĩnh, còn thần thái là năng lượng động toát ra thông qua phong thái ứng xử.\n- Ví dụ: 'Dù diện trang phục vô cùng giản dị, cô ấy vẫn toát lên một thần thái lịch lãm cuốn hút người đối diện.'"
+                    code: "Hãy giải thích từ 'thần thái' bằng tiếng Việt theo cấu trúc sau:\n- Nghĩa chung của từ 'thần thái'\n- Các yếu tố tạo nên thần thái (ánh mắt, nét mặt, dáng điệu, phong cách biểu hiện)\n- Sự khác nhau giữa 'thần thái' và ngoại hình\n- Ví dụ sử dụng từ 'thần thái' trong câu\nYêu cầu: Giải thích dễ hiểu, phù hợp với học sinh/sinh viên, có ví dụ gần gũi.",
+                    output: "Nghĩa chung: Thần thái là cái vẻ biểu hiện toát ra từ con người...\nYếu tố tạo thành: Ánh mắt tự tin tập trung, nét mặt tươi tắn...\nKhác biệt ngoại hình: Ngoại hình là vẻ bề ngoài có thể quan sát (chiều cao, nét mặt), còn thần thái là khí chất toát ra từ bên trong..."
                 },
                 {
                     title: "Phiên bản 3: Prompt Nâng cao (Phân vai nhà ngôn ngữ học)",
-                    code: "Bạn là một chuyên gia ngôn ngữ học ứng dụng. Hãy giải thích sâu sắc ý nghĩa của từ 'thần thái' trong tiếng Việt.\nTrước khi trả lời, hãy phân tích từ này theo các khía cạnh: nghĩa từ vựng, sắc thái biểu cảm, ngữ cảnh sử dụng, sự khác biệt với các từ gần nghĩa như 'ngoại hình', 'phong thái', 'khí chất', và vai trò của từ này trong giao tiếp đời sống.\nHãy trình bày kết quả theo mẫu sau:\n- Giải thích ngắn gọn: Nêu nghĩa cơ bản.\n- Phân tích mở rộng: Làm rõ từ này thể hiện điều gì ở con người.\n- Phân biệt với từ gần nghĩa: So sánh ngắn với 'ngoại hình', 'phong thái', 'khí chất'.",
-                    output: "- Giải thích ngắn gọn: Thần thái là từ ghép Hán-Việt kết hợp giữa 'Thần' (thần sắc, tinh thần bên trong) và 'Thái' (thái độ, vẻ biểu hiện bên ngoài), chỉ khí chất tự tin tỏa sáng của một người.\n- Phân tích mở rộng: Từ ngữ này nhấn mạnh tính chủ động và năng lực tự làm chủ cảm xúc của cá nhân, biểu thị nội lực tinh thần mạnh mẽ.\n- Phân biệt từ gần nghĩa:\n  + Ngoại hình: Thuần túy là vẻ đẹp thể chất tĩnh.\n  + Phong thái: Cách ứng xử có chuẩn mực xã hội nhất định.\n  + Khí chất: Xu hướng tính cách bẩm sinh mang tính sinh học bền vững."
+                    code: "Bạn là một chuyên gia ngôn ngữ học ứng dụng. Hãy giải thích sâu sắc ý nghĩa của từ 'thần thái' trong tiếng Việt. Phân tích từ này theo các khía cạnh: nghĩa từ vựng, sắc thái biểu cảm, ngữ cảnh sử dụng, sự khác biệt với các từ gần nghĩa như 'ngoại hình', 'phong thái', 'khí chất' và vai trò trong giao tiếp đời sống.\nHãy trình bày kết quả theo mẫu sau:\n- Giải thích ngắn gọn\n- Phân tích mở rộng\n- Phân biệt với các từ gần nghĩa",
+                    output: "Giải thích ngắn gọn: Nêu nghĩa cơ bản là vẻ sống động toát ra từ diện mạo...\nPhân tích mở rộng: Biểu thị ấn tượng tổng thể, năng lượng sống mà một cá nhân phát ra...\nPhân biệt: Khác biệt rõ nét với 'phong thái' (phong cách biểu hiện hành vi có chuẩn mực) và 'khí chất' (đặc điểm tâm lý bẩm sinh bền vững)..."
                 }
             ],
             3: [
                 {
                     title: "Phiên bản 1: Prompt Cơ bản",
-                    code: "Hãy tạo một bộ câu hỏi ôn tập về chủ đề 'Newspaper report evaluation'. Bộ câu hỏi cần giúp người học ôn lại cách đánh giá một bài báo dựa trên các tiêu chí như: độ tin cậy, tính khách quan, độ chính xác, bằng chứng, ngôn ngữ sử dụng và cách tổ chức thông tin.",
-                    output: "1. What is the main source of the newspaper report?\n2. Is the language used objective or emotional?\n3. Does the headline accurately reflect the content?\n4. What evidence is provided to support the claims?"
+                    code: "Hãy tạo một bộ câu hỏi ôn tập về chủ đề 'Newspaper report evaluation' giúp người học ôn lại cách đánh giá bài báo dựa trên tiêu chí: độ tin cậy, tính khách quan, độ chính xác, bằng chứng và ngôn ngữ.",
+                    output: "Bộ câu hỏi ôn tập:\n1. Where was the newspaper report published?\n2. Is the news source reliable?\n3. Is the report neutral or biased?..."
                 },
                 {
                     title: "Phiên bản 2: Prompt Cải tiến (Cấu trúc nhận thức)",
-                    code: "Hãy thiết kế một bộ câu hỏi ôn tập về chủ đề 'Newspaper report evaluation' theo cấu trúc sau:\n1. Câu hỏi nhận biết: kiểm tra khái niệm cơ bản như newspaper report, objectivity, accuracy, evidence, source credibility.\n2. Câu hỏi thông hiểu: yêu cầu người học giải thích vì sao một bài báo cần khách quan, chính xác và có nguồn dẫn đáng tin cậy.\n3. Câu hỏi vận dụng: đưa ra một đoạn tin ngắn và yêu cầu người học đánh giá lỗi về ngôn ngữ, bằng chứng, tính khách quan hoặc độ chính xác.\n4. Câu hỏi thảo luận: yêu cầu người học nhận xét mức độ đáng tin cậy của một bài báo và đề xuất cách cải thiện.\nYêu cầu: tạo khoảng 12–15 câu hỏi, có thể kết hợp câu hỏi trắc nghiệm, câu hỏi ngắn và câu hỏi mở; nội dung phù hợp với bài học tiếng Anh học thuật.",
-                    output: "A. Recognition (Câu 1-4): Match key terms (objectivity, bias, etc.) with definitions.\nB. Comprehension (Câu 5-8): 'Why must academic journalists separate fact from personal opinion?'\nC. Application (Câu 9-12): Given a short biased text, spot emotional loaded words.\nD. Discussion (Câu 13-15): Critical evaluation of standard local news articles."
+                    code: "Hãy thiết kế một bộ câu hỏi ôn tập về chủ đề 'Newspaper report evaluation' theo cấu trúc sau:\n1. Câu hỏi nhận biết (newspaper report, objectivity, accuracy)\n2. Câu hỏi thông hiểu (giải thích vì sao cần khách quan, chính xác)\n3. Câu hỏi vận dụng (đưa ra đoạn tin ngắn để đánh giá lỗi)\n4. Câu hỏi thảo luận (nhận xét mức độ tin cậy và đề xuất cải thiện)\nYêu cầu: Tạo khoảng 12-15 câu hỏi, kết hợp trắc nghiệm và tự luận.",
+                    output: "A. Recognition Questions:\n1. What is a newspaper report?\n2. What does objectivity mean in reporting?...\nB. Comprehension Questions:\n1. Why must a report remain neutral?..."
                 },
                 {
                     title: "Phiên bản 3: Prompt Nâng cao (Phân vai giảng viên)",
-                    code: "Bạn là một giảng viên tiếng Anh học thuật đang thiết kế tài liệu ôn tập cho chủ đề 'Newspaper report evaluation'. Hãy tạo một bộ câu hỏi ôn tập giúp người học biết cách đánh giá chất lượng và độ tin cậy của một bài báo.\nTrước khi xây dựng câu hỏi, hãy xác định các năng lực cần kiểm tra, gồm: nhận diện tiêu chí đánh giá bài báo, phân biệt fact và opinion, phát hiện ngôn ngữ thiên kiến, đánh giá bằng chứng và nguồn dẫn, nhận xét tính khách quan, kiểm tra độ chính xác, và đề xuất cách cải thiện một đoạn báo chưa tốt.\nHãy trình bày bộ câu hỏi theo mẫu sau:\n- A. Multiple-choice questions (6 câu hỏi trắc nghiệm)\n- B. Short-answer questions (5 câu hỏi trả lời ngắn)\n- C. Text evaluation task (Đọc đoạn báo ngắn 60-80 từ và tạo 4 câu hỏi phân tích)\n- D. Discussion questions (3 câu hỏi thảo luận)\n- E. Answer key / suggested answers (Cung cấp đáp án bằng tiếng Anh, giải thích bằng tiếng Việt)",
-                    output: "A. Multiple-choice (6 MCQs):\n1. Which statement best defines 'bias' in a news report? [A, B, C, D provided]\nB. Short-answer (5 Items):\n1. Differentiate between 'anecdotal evidence' and 'empirical evidence' in journalism.\nC. Text evaluation task:\nPassage: 'A shocking new study completely proves that AI will destroy all human writers by next year...'\nQuestions on language tone, validity of evidence, and accuracy.\nD. Discussion questions (3 items) on public media media literacy.\nE. Suggested Answer Key with deep academic explanations."
+                    code: "Bạn là một giảng viên tiếng Anh học thuật đang thiết kế tài liệu ôn tập cho chủ đề 'Newspaper report evaluation'. Hãy tạo một bộ câu hỏi giúp học viên biết cách đánh giá chất lượng và độ tin cậy của bài báo.\nCấu trúc thiết kế:\n- Phần A: 6 câu hỏi trắc nghiệm (MCQs) về objectivity, accuracy, bias, source credibility.\n- Phần B: 5 câu hỏi trả lời ngắn (Short-answer questions).\n- Phần C: 1 bài tập đọc hiểu phân tích đoạn báo ngắn 60-80 từ kèm 4 câu hỏi đánh giá.\n- Phần D: 3 câu hỏi thảo luận liên hệ thực tế.\n- Phần E: Đáp án chi tiết giải thích bằng tiếng Việt.",
+                    output: "A. Multiple-choice questions (6 items):\n1. Which of the following is an example of evidence?\nB. Short-answer questions (5 items)...\nC. Text evaluation task: [Passage provided]...\nD. Discussion questions...\nE. Answer Key with detailed Vietnamese explanations..."
                 }
             ]
         };
 
         function switchPromptTask(taskId) {
+            // Update tab styles
             const tabs = document.querySelectorAll('.prompt-tab-btn');
             tabs.forEach((tab, idx) => {
                 if (idx + 1 === taskId) {
-                    tab.className = "prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-dreamy-green text-dreamy-green whitespace-nowrap";
+                    tab.className = "prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-dreamy-green text-dreamy-green";
                 } else {
-                    tab.className = "prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white whitespace-nowrap";
+                    tab.className = "prompt-tab-btn py-2 px-4 text-xs font-medium border-b-2 border-transparent text-dreamy-cream/60 hover:text-white";
                 }
             });
 
+            // Populate prompt details inside container
             const container = document.getElementById('prompt-showcase-container');
             container.innerHTML = '';
             
@@ -995,6 +1027,7 @@
             lucide.createIcons();
         }
 
+        // Initialize Prompt Switcher with default Task 1
         switchPromptTask(1);
 
         // 8. INTERACTIVE GEN Z SLANGS DATA (EXERCISE 5)
@@ -1032,6 +1065,7 @@
         };
 
         function selectSlang(slangId) {
+            // Update button styles
             const buttons = document.querySelectorAll('.slang-btn');
             const keys = Object.keys(slangDatabase);
             buttons.forEach((btn, idx) => {
@@ -1042,10 +1076,11 @@
                 }
             });
 
+            // Update content display
             document.getElementById('slang-title').innerHTML = slangDatabase[slangId].title;
             document.getElementById('slang-origin').innerHTML = slangDatabase[slangId].origin;
             document.getElementById('slang-morph').innerHTML = slangDatabase[slangId].morph;
-            document.getElementById('slang-prompt').textContent = slangDatabase[slangId].prompt;
+            document.querySelector('#modal-ex5 .bg-white\\/5 p').textContent = slangDatabase[slangId].prompt;
         }
 
         // Initialize display step 1
